@@ -388,74 +388,102 @@
 
 <body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
     <!-- Fullscreen Presentation Overlay -->
-    <div id="fullscreenOverlay" class="fixed inset-0 bg-stone-950 z-[9999] hidden flex-col justify-between p-4 md:p-6 select-none transition-opacity duration-300 opacity-0 text-stone-300 font-body-md" style="background-color: #0f0e0c;">
+    <div id="fullscreenOverlay"
+        class="fixed inset-0 bg-stone-950 z-[9999] hidden flex-col justify-between p-3 md:p-6 select-none transition-opacity duration-300 opacity-0 text-stone-300 font-body-md"
+        style="background-color: #0f0e0c;">
         <!-- Top bar -->
-        <div class="flex justify-between items-center w-full border-b border-white/10 pb-4 text-white">
-            <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary-container text-2xl">auto_stories</span>
+        <div class="flex justify-between items-center w-full border-b border-white/10 pb-3 text-white">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary-container text-lg md:text-2xl">auto_stories</span>
                 <div>
-                    <h4 class="font-headline-md text-base md:text-lg tracking-wider uppercase text-stone-200">Mode Presentasi Aksara Labuhanbatu</h4>
-                    <p class="text-xs text-stone-400 font-body-md" id="fs-page-indicator">Halaman 1 dari 33</p>
+                    <h4
+                        class="font-headline-md text-xs md:text-lg tracking-wider uppercase text-stone-200 hidden sm:block">
+                        Mode Presentasi</h4>
+                    <p class="text-[10px] md:text-xs text-stone-400 font-body-md" id="fs-page-indicator">Halaman 1 dari
+                        33</p>
                 </div>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2 md:gap-4">
                 <!-- Slideshow Play/Pause -->
-                <button id="btnFsSlideshow" class="flex items-center gap-2 border border-white/20 px-4 py-2 text-xs font-label-caps hover:bg-white/10 transition-all rounded" title="Mainkan otomatis">
-                    <span class="material-symbols-outlined text-sm">play_arrow</span> MULAI SLIDESHOW
+                <button id="btnFsSlideshow"
+                    class="flex items-center gap-1 border border-white/20 px-2 py-1.5 md:px-4 md:py-2 text-[10px] md:text-xs font-label-caps hover:bg-white/10 transition-all rounded cursor-pointer"
+                    title="Mainkan otomatis">
+                    <span class="material-symbols-outlined text-sm">play_arrow</span>
+                    <span class="hidden md:inline">MULAI SLIDESHOW</span>
                 </button>
                 <!-- Zoom Controls -->
                 <div class="flex items-center border border-white/20 rounded overflow-hidden">
-                    <button id="btnFsZoomOut" class="flex items-center justify-center p-2 hover:bg-white/10 text-stone-300 transition-all cursor-pointer" title="Perkecil">
-                        <span class="material-symbols-outlined text-sm">zoom_out</span>
+                    <button id="btnFsZoomOut"
+                        class="flex items-center justify-center p-1.5 md:p-2 hover:bg-white/10 text-stone-300 transition-all cursor-pointer"
+                        title="Perkecil">
+                        <span class="material-symbols-outlined text-xs md:text-sm">zoom_out</span>
                     </button>
-                    <button id="btnFsZoomReset" class="flex items-center justify-center px-2.5 py-2 hover:bg-white/10 text-stone-300 text-xs font-mono border-x border-white/20 transition-all cursor-pointer" title="Reset Zoom">
+                    <button id="btnFsZoomReset"
+                        class="flex items-center justify-center px-2 py-1.5 md:px-2.5 md:py-2 hover:bg-white/10 text-stone-300 text-[10px] md:text-xs font-mono border-x border-white/20 transition-all cursor-pointer"
+                        title="Reset Zoom">
                         100%
                     </button>
-                    <button id="btnFsZoomIn" class="flex items-center justify-center p-2 hover:bg-white/10 text-stone-300 transition-all cursor-pointer" title="Perbesar">
-                        <span class="material-symbols-outlined text-sm">zoom_in</span>
+                    <button id="btnFsZoomIn"
+                        class="flex items-center justify-center p-1.5 md:p-2 hover:bg-white/10 text-stone-300 transition-all cursor-pointer"
+                        title="Perbesar">
+                        <span class="material-symbols-outlined text-xs md:text-sm">zoom_in</span>
                     </button>
                 </div>
                 <!-- Native Fullscreen Toggle -->
-                <button id="btnFsToggleNative" class="flex items-center justify-center border border-white/20 p-2 hover:bg-white/10 transition-all rounded cursor-pointer" title="Ganti browser fullscreen">
-                    <span class="material-symbols-outlined text-sm">fullscreen</span>
+                <button id="btnFsToggleNative"
+                    class="flex items-center justify-center border border-white/20 p-1.5 md:p-2 hover:bg-white/10 transition-all rounded cursor-pointer"
+                    title="Ganti browser fullscreen">
+                    <span class="material-symbols-outlined text-xs md:text-sm">fullscreen</span>
                 </button>
                 <!-- Close Button -->
-                <button id="btnFsClose" class="bg-primary text-white flex items-center justify-center p-2.5 rounded hover:bg-primary-container transition-all cursor-pointer">
-                    <span class="material-symbols-outlined text-base">close</span>
+                <button id="btnFsClose"
+                    class="bg-primary text-white flex items-center justify-center p-2 rounded hover:bg-primary-container transition-all cursor-pointer">
+                    <span class="material-symbols-outlined text-sm md:text-base">close</span>
                 </button>
             </div>
         </div>
 
         <!-- Middle Content Area (Manuscript Display) -->
-        <div class="flex-1 flex items-center justify-center relative my-4 w-full max-w-6xl mx-auto">
+        <div class="flex-1 flex items-center justify-center relative my-3 w-full max-w-6xl mx-auto">
             <!-- Left floating arrow -->
-            <button id="btnFsPrev" class="absolute left-0 md:left-4 z-10 w-16 h-16 rounded-full bg-black/60 border border-white/10 text-white flex items-center justify-center hover:bg-primary hover:scale-110 active:scale-95 transition-all disabled:opacity-20 disabled:cursor-not-allowed cursor-pointer">
-                <span class="material-symbols-outlined text-3xl">navigate_before</span>
+            <button id="btnFsPrev"
+                class="absolute left-1 md:left-4 z-10 w-10 h-10 md:w-16 md:h-16 rounded-full bg-black/60 border border-white/10 text-white flex items-center justify-center hover:bg-primary hover:scale-110 active:scale-95 transition-all disabled:opacity-20 disabled:cursor-not-allowed cursor-pointer shadow-lg">
+                <span class="material-symbols-outlined text-xl md:text-3xl">navigate_before</span>
             </button>
 
             <!-- Centered Image Panel with subtle shadow and border -->
-            <div id="fsImageContainer" class="h-[46vh] md:h-[50vh] aspect-[3/4] bg-stone-900 border border-white/15 shadow-2xl relative overflow-hidden rounded flex items-center justify-center">
-                <img id="imgFsMain" src="pages/page_1.png" alt="Halaman Presentasi" class="max-w-full max-h-full object-contain transition-transform duration-200 origin-center select-none" />
-                <div class="absolute bottom-4 right-4 bg-black/75 px-3 py-1 rounded text-[10px] tracking-widest text-stone-300 font-mono z-20" id="fs-page-badge">HAL. 1 / 33</div>
+            <div id="fsImageContainer"
+                class="h-[38vh] sm:h-[46vh] md:h-[50vh] aspect-[3/4] bg-stone-900 border border-white/15 shadow-2xl relative overflow-hidden rounded flex items-center justify-center">
+                <img id="imgFsMain" src="pages/page_1.png" alt="Halaman Presentasi"
+                    class="max-w-full max-h-full object-contain transition-transform duration-200 origin-center select-none" />
+                <div class="absolute bottom-4 right-4 bg-black/75 px-3 py-1 rounded text-[10px] tracking-widest text-stone-300 font-mono z-20"
+                    id="fs-page-badge">HAL. 1 / 33</div>
             </div>
 
             <!-- Right floating arrow -->
-            <button id="btnFsNext" class="absolute right-0 md:right-4 z-10 w-16 h-16 rounded-full bg-black/60 border border-white/10 text-white flex items-center justify-center hover:bg-primary hover:scale-110 active:scale-95 transition-all disabled:opacity-20 disabled:cursor-not-allowed cursor-pointer">
-                <span class="material-symbols-outlined text-3xl">navigate_next</span>
+            <button id="btnFsNext"
+                class="absolute right-1 md:right-4 z-10 w-10 h-10 md:w-16 md:h-16 rounded-full bg-black/60 border border-white/10 text-white flex items-center justify-center hover:bg-primary hover:scale-110 active:scale-95 transition-all disabled:opacity-20 disabled:cursor-not-allowed cursor-pointer shadow-lg">
+                <span class="material-symbols-outlined text-xl md:text-3xl">navigate_next</span>
             </button>
         </div>
 
         <!-- Bottom Transcript & Translation area -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-6xl mx-auto bg-stone-900/60 border border-white/10 p-4 md:p-5 rounded backdrop-blur-md text-stone-300">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 w-full max-w-6xl mx-auto bg-stone-900/60 border border-white/10 p-3 md:p-5 rounded backdrop-blur-md text-stone-300 max-h-[22vh] md:max-h-none overflow-y-auto">
             <div class="border-l-2 border-primary pl-3">
-                <h5 class="font-label-caps text-[10px] tracking-widest text-primary-container mb-1.5 uppercase">Transkripsi Diplomatik</h5>
-                <p id="fs-trans-text" class="font-headline-md text-xs md:text-sm italic leading-relaxed text-stone-200 transition-opacity duration-300">
+                <h5
+                    class="font-label-caps text-[9px] md:text-[10px] tracking-widest text-primary-container mb-1 uppercase">
+                    Transkripsi Diplomatik</h5>
+                <p id="fs-trans-text"
+                    class="font-headline-md text-[11px] md:text-sm italic leading-relaxed text-stone-200 transition-opacity duration-300">
                     [Halaman 1] Aksara pembuka naskah Labuhanbatu...
                 </p>
             </div>
             <div class="border-l-2 border-white/20 pl-3">
-                <h5 class="font-label-caps text-[10px] tracking-widest text-stone-400 mb-1.5 uppercase">Terjemahan Bahasa Indonesia</h5>
-                <p id="fs-translat-text" class="font-body-md text-[11px] md:text-xs leading-relaxed text-stone-400 transition-opacity duration-300">
+                <h5 class="font-label-caps text-[9px] md:text-[10px] tracking-widest text-stone-400 mb-1 uppercase">
+                    Terjemahan Bahasa Indonesia</h5>
+                <p id="fs-translat-text"
+                    class="font-body-md text-[10px] md:text-xs leading-relaxed text-stone-400 transition-opacity duration-300">
                     Halaman pertama naskah ini memuat aksara pembuka yang berfungsi sebagai kolofon...
                 </p>
             </div>
@@ -495,8 +523,8 @@
             </div>
             <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-4xl">
                 <span
-                    class="block font-label-caps text-label-caps text-on-primary-container mb-4 tracking-[0.3em] drop-shadow-sm reveal">INSTITUT
-                    PENELITIAN FILOLOGI</span>
+                    class="block font-label-caps text-label-caps text-on-primary-container mb-4 tracking-[0.3em] drop-shadow-sm reveal">FILOLOGI
+                    LANJUT</span>
                 <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6 leading-tight text-shadow-academic reveal"
                     style="transition-delay: 200ms;">Aksara Labuhanbatu: Naskah Kuno Batak</h1>
                 <div class="w-24 h-1 bg-on-primary-container mx-auto mb-8 reveal" style="transition-delay: 400ms;">
@@ -705,40 +733,51 @@
         </section>
 
         <!-- Section 4: Dokumentasi Video -->
-        <section id="video-documentation" class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal">
+        <section id="video-documentation"
+            class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="font-label-caps text-label-caps text-primary tracking-widest mb-3 block uppercase">Dokumentasi Proyek</span>
+                <span
+                    class="font-label-caps text-label-caps text-primary tracking-widest mb-3 block uppercase">Dokumentasi
+                    Proyek</span>
                 <h2 class="font-headline-lg text-headline-lg text-primary-container">Video Penelitian & Pengkajian</h2>
                 <p class="text-secondary mt-3 font-body-md max-w-xl mx-auto">
-                    Simak proses penelusuran, digitalisasi, dan analisis naskah kuno Aksara Labuhanbatu secara langsung melalui video dokumentasi di bawah ini.
+                    Simak proses penelusuran, digitalisasi, dan analisis naskah kuno Aksara Labuhanbatu secara langsung
+                    melalui video dokumentasi di bawah ini.
                 </p>
             </div>
-            
+
             <div class="max-w-4xl mx-auto">
-                <div class="relative aspect-video w-full bg-stone-900 shadow-2xl rounded-xl overflow-hidden border border-primary/10 group">
+                <div
+                    class="relative aspect-video w-full bg-stone-900 shadow-2xl rounded-xl overflow-hidden border border-primary/10 group">
                     <!-- Video Background Overlay -->
                     <div class="absolute inset-0 bg-cover bg-center opacity-60 mix-blend-luminosity group-hover:opacity-40 transition-opacity duration-500"
-                         style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDumNU8LunFgxGD5JB9yHZF5ft5a03lm3oU72N7EQqvbxJMqloi9empI-afS-ll6Cl1NqSRsvi0WF637WUj4gGAkzwffB7R2ushj2h_Udh9Vl_lTJcgJJf_m75Jnk5Wy3S8zCL-PsfOEGsheMEFccDJihpBsN8CJ2Y66bb_tJCTND240hRQBzy4kTIsNddYKSD0O_-cuLL7-dF-QMJCMpozWydOWh3okZSV-Djaeo_73EtWFKJ9C2UkIoVkdt8CXCU3wnnqTc9dKX0');">
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDumNU8LunFgxGD5JB9yHZF5ft5a03lm3oU72N7EQqvbxJMqloi9empI-afS-ll6Cl1NqSRsvi0WF637WUj4gGAkzwffB7R2ushj2h_Udh9Vl_lTJcgJJf_m75Jnk5Wy3S8zCL-PsfOEGsheMEFccDJihpBsN8CJ2Y66bb_tJCTND240hRQBzy4kTIsNddYKSD0O_-cuLL7-dF-QMJCMpozWydOWh3okZSV-Djaeo_73EtWFKJ9C2UkIoVkdt8CXCU3wnnqTc9dKX0');">
                     </div>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40"></div>
-                    
+
                     <!-- Center Play Button -->
                     <div class="absolute inset-0 flex flex-col items-center justify-center z-10 text-white">
-                        <button class="w-20 h-20 rounded-full bg-primary/95 text-white flex items-center justify-center shadow-lg transform transition-all duration-300 hover:scale-110 active:scale-95 hover:bg-primary-container group/btn mb-4">
+                        <button
+                            class="w-20 h-20 rounded-full bg-primary/95 text-white flex items-center justify-center shadow-lg transform transition-all duration-300 hover:scale-110 active:scale-95 hover:bg-primary-container group/btn mb-4">
                             <span class="material-symbols-outlined text-4xl ml-1 fill-1">play_arrow</span>
                         </button>
-                        <span class="font-label-caps text-xs tracking-[0.2em] text-stone-300">PUTAR VIDEO DOKUMENTASI</span>
+                        <span class="font-label-caps text-xs tracking-[0.2em] text-stone-300">PUTAR VIDEO
+                            DOKUMENTASI</span>
                     </div>
 
                     <!-- Video Controls Placeholder -->
-                    <div class="absolute bottom-0 inset-x-0 p-6 flex items-center justify-between z-10 bg-gradient-to-t from-black/90 to-transparent">
+                    <div
+                        class="absolute bottom-0 inset-x-0 p-6 flex items-center justify-between z-10 bg-gradient-to-t from-black/90 to-transparent">
                         <div class="flex items-center gap-4 text-white/80">
                             <span class="material-symbols-outlined cursor-pointer hover:text-white">play_arrow</span>
                             <span class="material-symbols-outlined cursor-pointer hover:text-white">volume_up</span>
                             <span class="text-xs font-mono">00:00 / 08:45</span>
                         </div>
-                        <div class="flex-1 mx-6 h-1 bg-white/20 rounded-full overflow-hidden relative cursor-pointer group/bar">
-                            <div class="absolute left-0 top-0 h-full w-1/3 bg-primary group-hover/bar:bg-primary-fixed transition-colors"></div>
+                        <div
+                            class="flex-1 mx-6 h-1 bg-white/20 rounded-full overflow-hidden relative cursor-pointer group/bar">
+                            <div
+                                class="absolute left-0 top-0 h-full w-1/3 bg-primary group-hover/bar:bg-primary-fixed transition-colors">
+                            </div>
                         </div>
                         <div class="flex items-center gap-4 text-white/80">
                             <span class="material-symbols-outlined cursor-pointer hover:text-white">settings</span>
@@ -752,134 +791,195 @@
         <div class="ulos-divider"></div>
 
         <!-- Section 5: Anggota Kelompok -->
-        <section id="team" class="py-24 bg-surface-container-low px-margin-mobile md:px-margin-desktop border-t border-on-surface/5 reveal">
+        <section id="team"
+            class="py-24 bg-surface-container-low px-margin-mobile md:px-margin-desktop border-t border-on-surface/5 reveal">
             <div class="max-w-container-max mx-auto">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="font-label-caps text-label-caps text-primary tracking-widest mb-3 block uppercase">Tim Peneliti</span>
+                    <span class="font-label-caps text-label-caps text-primary tracking-widest mb-3 block uppercase">Tim
+                        Peneliti</span>
                     <h2 class="font-headline-lg text-headline-lg text-primary-container">Anggota Kelompok</h2>
                     <p class="text-secondary mt-3 font-body-md max-w-xl mx-auto">
-                        Kolaborasi mahasiswa lintas program studi Universitas Sumatera Utara dalam penelitian, pelestarian, dan digitalisasi naskah kuno Aksara Labuhanbatu.
+                        Kolaborasi mahasiswa lintas program studi Universitas Sumatera Utara dalam penelitian,
+                        pelestarian, dan digitalisasi naskah kuno Aksara Labuhanbatu.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                     <!-- Member 1 -->
-                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                    <div
+                        class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                         <div>
-                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">JS</div>
-                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Jhons Steven</h3>
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">
+                                JS</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">
+                                Jhons Steven</h3>
                             <p class="text-xs text-secondary mt-1">NIM. 240703011</p>
                         </div>
                         <div class="mt-4 pt-3 border-t border-on-surface/5">
-                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Sastra Batak</span>
+                            <span
+                                class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Sastra
+                                Batak</span>
                         </div>
                     </div>
 
                     <!-- Member 2 -->
-                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                    <div
+                        class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                         <div>
-                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">G</div>
-                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Gunawan</h3>
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">
+                                G</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">
+                                Gunawan</h3>
                             <p class="text-xs text-secondary mt-1">NIM. 240904060</p>
                         </div>
                         <div class="mt-4 pt-3 border-t border-on-surface/5">
-                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu Komunikasi</span>
+                            <span
+                                class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu
+                                Komunikasi</span>
                         </div>
                     </div>
 
                     <!-- Member 3 -->
-                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                    <div
+                        class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                         <div>
-                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">KO</div>
-                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Khansa Fazian Oneal</h3>
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">
+                                KO</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">
+                                Khansa Fazian Oneal</h3>
                             <p class="text-xs text-secondary mt-1">NIM. 240904066</p>
                         </div>
                         <div class="mt-4 pt-3 border-t border-on-surface/5">
-                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu Komunikasi</span>
+                            <span
+                                class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu
+                                Komunikasi</span>
                         </div>
                     </div>
 
                     <!-- Member 4 -->
-                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                    <div
+                        class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                         <div>
-                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">JD</div>
-                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Juan Putra Hamdani Daulay</h3>
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">
+                                JD</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">
+                                Juan Putra Hamdani Daulay</h3>
                             <p class="text-xs text-secondary mt-1">NIM. 240904004</p>
                         </div>
                         <div class="mt-4 pt-3 border-t border-on-surface/5">
-                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu Komunikasi</span>
+                            <span
+                                class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu
+                                Komunikasi</span>
                         </div>
                     </div>
 
                     <!-- Member 5 -->
-                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                    <div
+                        class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                         <div>
-                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">DM</div>
-                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Dzakwan Al Matin</h3>
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">
+                                DM</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">
+                                Dzakwan Al Matin</h3>
                             <p class="text-xs text-secondary mt-1">NIM. 240904105</p>
                         </div>
                         <div class="mt-4 pt-3 border-t border-on-surface/5">
-                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu Komunikasi</span>
+                            <span
+                                class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu
+                                Komunikasi</span>
                         </div>
                     </div>
 
                     <!-- Member 6 -->
-                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                    <div
+                        class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                         <div>
-                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">RN</div>
-                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Rafi Andara Nst</h3>
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">
+                                RN</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">
+                                Rafi Andara Nst</h3>
                             <p class="text-xs text-secondary mt-1">NIM. 241402095</p>
                         </div>
                         <div class="mt-4 pt-3 border-t border-on-surface/5">
-                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Teknologi Informasi</span>
+                            <span
+                                class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Teknologi
+                                Informasi</span>
                         </div>
                     </div>
 
                     <!-- Member 7 -->
-                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                    <div
+                        class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                         <div>
-                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">KP</div>
-                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Ketrin Br Purba</h3>
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">
+                                KP</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">
+                                Ketrin Br Purba</h3>
                             <p class="text-xs text-secondary mt-1">NIM. 240709021</p>
                         </div>
                         <div class="mt-4 pt-3 border-t border-on-surface/5">
-                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu Perpustakaan</span>
+                            <span
+                                class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu
+                                Perpustakaan</span>
                         </div>
                     </div>
 
                     <!-- Member 8 -->
-                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                    <div
+                        class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                         <div>
-                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">LP</div>
-                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Lestari Nauli Pasaribu</h3>
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">
+                                LP</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">
+                                Lestari Nauli Pasaribu</h3>
                             <p class="text-xs text-secondary mt-1">NIM. 240709035</p>
                         </div>
                         <div class="mt-4 pt-3 border-t border-on-surface/5">
-                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu Perpustakaan</span>
+                            <span
+                                class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu
+                                Perpustakaan</span>
                         </div>
                     </div>
 
                     <!-- Member 9 -->
-                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                    <div
+                        class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                         <div>
-                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">WA</div>
-                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Wahyu Saleh Alfarisyi</h3>
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">
+                                WA</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">
+                                Wahyu Saleh Alfarisyi</h3>
                             <p class="text-xs text-secondary mt-1">NIM. 240501060</p>
                         </div>
                         <div class="mt-4 pt-3 border-t border-on-surface/5">
-                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ekonomi/Sastra</span>
+                            <span
+                                class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ekonomi/Sastra</span>
                         </div>
                     </div>
 
                     <!-- Member 10 -->
-                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                    <div
+                        class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                         <div>
-                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">KG</div>
-                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Keisha Gea</h3>
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">
+                                KG</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">
+                                Keisha Gea</h3>
                             <p class="text-xs text-secondary mt-1">NIM. 240710024</p>
                         </div>
                         <div class="mt-4 pt-3 border-t border-on-surface/5">
-                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Sastra/Komunikasi</span>
+                            <span
+                                class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Sastra/Komunikasi</span>
                         </div>
                     </div>
                 </div>
@@ -897,7 +997,7 @@
                     Aksara Labuhanbatu
                 </div>
                 <p class="font-body-md text-body-md text-on-surface dark:text-inverse-on-surface max-w-md">
-                    © 2024 Aksara Labuhanbatu — Institut Penelitian Filologi Batak. Didedikasikan untuk pelestarian
+                    © 2024 Aksara Labuhanbatu. Didedikasikan untuk pelestarian
                     warisan aksara dan naskah kuno Labuhanbatu, Sumatera Utara.
                 </p>
             </div>
@@ -1071,18 +1171,18 @@
         // MODE PRESENTASI FULLSCREEN
         // ========================================
 
-        const fsOverlay     = document.getElementById('fullscreenOverlay');
-        const fsBtnOpen     = document.getElementById('btn-fullscreen');
-        const fsBtnClose    = document.getElementById('btnFsClose');
-        const fsImgMain     = document.getElementById('imgFsMain');
-        const fsPageInd     = document.getElementById('fs-page-indicator');
-        const fsPageBad     = document.getElementById('fs-page-badge');
-        const fsTrans       = document.getElementById('fs-trans-text');
-        const fsTranslat    = document.getElementById('fs-translat-text');
-        const fsBtnPrev     = document.getElementById('btnFsPrev');
-        const fsBtnNext     = document.getElementById('btnFsNext');
-        const fsBtnPlay     = document.getElementById('btnFsSlideshow');
-        const fsBtnNative   = document.getElementById('btnFsToggleNative');
+        const fsOverlay = document.getElementById('fullscreenOverlay');
+        const fsBtnOpen = document.getElementById('btn-fullscreen');
+        const fsBtnClose = document.getElementById('btnFsClose');
+        const fsImgMain = document.getElementById('imgFsMain');
+        const fsPageInd = document.getElementById('fs-page-indicator');
+        const fsPageBad = document.getElementById('fs-page-badge');
+        const fsTrans = document.getElementById('fs-trans-text');
+        const fsTranslat = document.getElementById('fs-translat-text');
+        const fsBtnPrev = document.getElementById('btnFsPrev');
+        const fsBtnNext = document.getElementById('btnFsNext');
+        const fsBtnPlay = document.getElementById('btnFsSlideshow');
+        const fsBtnNative = document.getElementById('btnFsToggleNative');
 
         let slideshowInterval = null;
         let isSlideshowPlaying = false;
@@ -1113,7 +1213,7 @@
             fsImgMain.alt = 'Halaman ' + currentPage;
             fsPageInd.textContent = 'Halaman ' + currentPage + ' dari ' + TOTAL_PAGES;
             fsPageBad.textContent = 'HAL. ' + currentPage + ' / ' + TOTAL_PAGES;
-            
+
             fsBtnPrev.disabled = currentPage === 1;
             fsBtnNext.disabled = currentPage === TOTAL_PAGES;
 
@@ -1150,7 +1250,7 @@
                 fsOverlay.classList.remove('flex');
                 fsOverlay.classList.add('hidden');
             }, 300);
-            
+
             if (document.fullscreenElement) {
                 document.exitFullscreen().catch(err => console.log(err));
             }
@@ -1166,7 +1266,7 @@
 
         function startSlideshow() {
             isSlideshowPlaying = true;
-            fsBtnPlay.innerHTML = '<span class="material-symbols-outlined text-sm">pause</span> HENTIKAN';
+            fsBtnPlay.innerHTML = '<span class="material-symbols-outlined text-sm">pause</span> <span class="hidden md:inline">HENTIKAN</span>';
             fsBtnPlay.classList.add('bg-primary/20', 'text-primary-container');
             slideshowInterval = setInterval(() => {
                 if (currentPage < TOTAL_PAGES) {
@@ -1179,7 +1279,7 @@
 
         function stopSlideshow() {
             isSlideshowPlaying = false;
-            fsBtnPlay.innerHTML = '<span class="material-symbols-outlined text-sm">play_arrow</span> MULAI SLIDESHOW';
+            fsBtnPlay.innerHTML = '<span class="material-symbols-outlined text-sm">play_arrow</span> <span class="hidden md:inline">MULAI SLIDESHOW</span>';
             fsBtnPlay.classList.remove('bg-primary/20', 'text-primary-container');
             if (slideshowInterval) {
                 clearInterval(slideshowInterval);
