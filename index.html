@@ -355,13 +355,6 @@
             z-index: 1;
         }
 
-        /* ============================
-           TRANSCRIPTION FADE
-        ============================= */
-        #transcription-text,
-        #translation-text {
-            transition: opacity 0.3s ease;
-        }
 
         /* ============================
            MOBILE BOOK
@@ -467,24 +460,19 @@
             </button>
         </div>
 
-        <!-- Bottom Transcript & Translation area -->
+        <!-- Bottom Summary area -->
         <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 w-full max-w-6xl mx-auto bg-stone-900/60 border border-white/10 p-3 md:p-5 rounded backdrop-blur-md text-stone-300 max-h-[22vh] md:max-h-none overflow-y-auto">
+            class="w-full max-w-6xl mx-auto bg-stone-900/60 border border-white/10 p-3 md:p-5 rounded backdrop-blur-md text-stone-300 max-h-[22vh] md:max-h-none overflow-y-auto">
             <div class="border-l-2 border-primary pl-3">
                 <h5
                     class="font-label-caps text-[9px] md:text-[10px] tracking-widest text-primary-container mb-1 uppercase">
-                    Transkripsi Diplomatik</h5>
-                <p id="fs-trans-text"
-                    class="font-headline-md text-[11px] md:text-sm italic leading-relaxed text-stone-200 transition-opacity duration-300">
-                    [Halaman 1] Aksara pembuka naskah Labuhanbatu...
-                </p>
-            </div>
-            <div class="border-l-2 border-white/20 pl-3">
-                <h5 class="font-label-caps text-[9px] md:text-[10px] tracking-widest text-stone-400 mb-1 uppercase">
-                    Terjemahan Bahasa Indonesia</h5>
-                <p id="fs-translat-text"
-                    class="font-body-md text-[10px] md:text-xs leading-relaxed text-stone-400 transition-opacity duration-300">
-                    Halaman pertama naskah ini memuat aksara pembuka yang berfungsi sebagai kolofon...
+                    Ringkasan Naskah</h5>
+                <p class="font-body-md text-[10px] md:text-xs leading-relaxed text-stone-300">
+                    Naskah Aksara Labuhanbatu merupakan warisan budaya tulis tradisional dari kawasan Labuhanbatu,
+                    Sumatera Utara. Naskah kuno ini ditulis menggunakan aksara Batak khas pesisir pada medium
+                    tradisional, memuat kearifan lokal leluhur seperti mantra pelindung ritual, sistem penanggalan adat
+                    (parihalaan) untuk menentukan hari baik, petunjuk pengobatan tradisional oleh para Datu (tabib
+                    adat), serta silsilah keluarga/klan penting.
                 </p>
             </div>
         </div>
@@ -505,10 +493,6 @@
                 <a class="text-secondary font-label-caps text-label-caps transition-colors duration-300 hover:text-primary-container"
                     href="#team">Tim</a>
             </nav>
-            <a href="Aksara Labuhanbatu.pdf" target="_blank"
-                class="bg-primary-container text-on-primary-container px-4 py-2 md:px-6 md:py-2 font-label-caps text-[10px] md:text-label-caps transition-all hover:scale-105 active:scale-95 no-underline">
-                Unduh PDF
-            </a>
         </div>
     </header>
 
@@ -530,7 +514,7 @@
                 <div class="w-24 h-1 bg-on-primary-container mx-auto mb-8 reveal" style="transition-delay: 400ms;">
                 </div>
                 <p class="font-headline-md text-headline-md text-primary-fixed-dim italic drop-shadow-sm reveal"
-                    style="transition-delay: 600ms;">"Penelitian dan Pelestarian Aksara Kuno Labuhanbatu"</p>
+                    style="transition-delay: 600ms;">"Pembelajaran dan Pelestarian Aksara Kuno Labuhanbatu"</p>
             </div>
         </section>
 
@@ -539,17 +523,18 @@
         <!-- Section 2: Flipbook Naskah -->
         <section id="manuscripts"
             class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal">
+            <div class="mb-8">
+                <span
+                    class="font-label-caps text-label-caps text-primary tracking-widest mb-2 block uppercase">Koleksi
+                    Digital</span>
+                <h2 class="font-headline-lg text-headline-lg">Aksara Labuhanbatu</h2>
+                <p class="text-secondary mt-2 italic font-body-md">Klik tombol untuk membalik halaman naskah</p>
+            </div>
+
             <div class="flex flex-col lg:flex-row gap-16 items-start">
 
                 <!-- LEFT: Flipbook -->
                 <div class="lg:w-1/2 w-full flex flex-col">
-                    <div class="mb-8">
-                        <span
-                            class="font-label-caps text-label-caps text-primary tracking-widest mb-2 block uppercase">Koleksi
-                            Digital</span>
-                        <h2 class="font-headline-lg text-headline-lg">Aksara Labuhanbatu</h2>
-                        <p class="text-secondary mt-2 italic font-body-md">Klik tombol untuk membalik halaman naskah</p>
-                    </div>
 
                     <!-- Book spread -->
                     <div class="book-wrapper">
@@ -615,25 +600,22 @@
                     </div>
                 </div>
 
-                <!-- RIGHT: Transcription + Translation -->
-                <div class="lg:w-1/2 flex flex-col justify-start space-y-6 w-full lg:pt-24">
-                    <div
-                        class="bg-surface-container-highest p-8 border-l-4 border-primary shadow-sm relative overflow-hidden">
-                        <h3 class="font-label-caps text-label-caps mb-4 text-primary relative z-10">TRANSKRIPSI
-                            DIPLOMATIK</h3>
-                        <p class="font-headline-md text-xl italic text-on-surface/90 leading-relaxed relative z-10"
-                            id="transcription-text">
-                            [Halaman 1] Aksara pembuka naskah Labuhanbatu — simbol pelindung dan penanda otoritas sang
-                            Datu penulis naskah ini.
-                        </p>
-                    </div>
+                <!-- RIGHT: Manuscript Summary -->
+                <div class="lg:w-1/2 flex flex-col justify-start space-y-6 w-full">
                     <div
                         class="bg-white p-8 border border-on-surface/5 shadow-sm transform transition-all hover:shadow-md">
-                        <h3 class="font-label-caps text-label-caps mb-4 text-primary">TERJEMAHAN BAHASA INDONESIA</h3>
-                        <p class="font-body-md text-body-md text-on-surface/70 leading-loose" id="translation-text">
-                            Halaman pertama naskah ini memuat aksara pembuka yang berfungsi sebagai kolofon — identitas
-                            pengarang, waktu penulisan, dan tujuan pembuatan naskah. Aksara Labuhanbatu yang digunakan
-                            merupakan varian khas dialek Batak di kawasan pesisir Labuhanbatu.
+                        <h3 class="font-label-caps text-label-caps mb-4 text-primary">RINGKASAN NASKAH</h3>
+                        <p class="font-body-md text-body-md text-on-surface/70 leading-loose">
+                            Naskah Aksara Labuhanbatu merupakan warisan budaya tulis tradisional yang berasal dari
+                            kawasan Labuhanbatu, Sumatera Utara. Naskah kuno ini ditulis menggunakan aksara Batak khas
+                            pesisir pada medium tradisional.
+                        </p>
+                        <p class="font-body-md text-body-md text-on-surface/70 leading-loose mt-4">
+                            Isi naskah memuat kearifan lokal leluhur, yang meliputi mantra pelindung ritual, sistem
+                            penanggalan adat (parihalaan) untuk menentukan hari baik, petunjuk pengobatan tradisional
+                            kuno yang dilakukan oleh para Datu (tabib adat), serta silsilah keluarga/klan penting.
+                            Melalui digitalisasi dan analisis filologi, naskah ini dilestarikan sebagai bagian penting
+                            dari warisan budaya nusantara.
                         </p>
                     </div>
                     <div class="flex gap-4 flex-wrap">
@@ -642,10 +624,6 @@
                             id="btn-fullscreen">
                             <span class="material-symbols-outlined text-sm">fullscreen</span> PRESENTASI FULLSCREEN
                         </button>
-                        <a href="Aksara Labuhanbatu.pdf" target="_blank"
-                            class="border border-outline text-outline px-6 py-4 font-label-caps text-[12px] hover:bg-surface-container transition-all flex items-center gap-2 no-underline">
-                            <span class="material-symbols-outlined text-sm">download</span> UNDUH PDF
-                        </a>
                         <button
                             class="border border-outline text-outline px-4 py-4 font-label-caps text-[12px] hover:bg-surface-container transition-all"
                             id="reset-book">
@@ -664,7 +642,7 @@
             <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     <!-- Immersive Visual Composition -->
-                    <div class="lg:col-span-6 relative h-[600px] flex items-center justify-center reveal">
+                    <div class="lg:col-span-6 relative h-[450px] sm:h-[550px] lg:h-[600px] flex items-center justify-center reveal">
                         <div
                             class="absolute z-10 top-0 left-0 w-64 h-64 bg-surface-container-highest border border-primary/10 shadow-2xl p-4 rotate-[-6deg] transition-transform hover:rotate-0 duration-500">
                             <img alt="Aksara Labuhanbatu — Detail"
@@ -710,9 +688,9 @@
                                 atas medium tradisional, mencerminkan kearifan lokal leluhur Batak yang kaya.
                             </p>
                             <p class="font-body-md">
-                                Melalui restorasi digital dan analisis filologi, tim kami mengungkap lapisan makna yang
-                                tersembunyi — dari mantra pelindung, sistem penanggalan, hingga catatan sejarah lokal
-                                yang belum pernah dipublikasikan sebelumnya.
+                                Melalui proyek digitalisasi dan pembelajaran filologi ini, kami mempelajari serta
+                                memperkenalkan makna yang terkandung di dalam naskah — mulai dari mantra pelindung,
+                                sistem penanggalan, hingga catatan sejarah lokal yang berharga.
                             </p>
                         </div>
                         <div class="grid grid-cols-2 gap-8 pt-8 border-t border-primary/10">
@@ -739,7 +717,7 @@
                 <span
                     class="font-label-caps text-label-caps text-primary tracking-widest mb-3 block uppercase">Dokumentasi
                     Proyek</span>
-                <h2 class="font-headline-lg text-headline-lg text-primary-container">Video Penelitian & Pengkajian</h2>
+                <h2 class="font-headline-lg text-headline-lg text-primary-container">Video Dokumentasi & Proyek</h2>
                 <p class="text-secondary mt-3 font-body-md max-w-xl mx-auto">
                     Simak proses penelusuran, digitalisasi, dan analisis naskah kuno Aksara Labuhanbatu secara langsung
                     melalui video dokumentasi di bawah ini.
@@ -795,11 +773,9 @@
             class="py-24 bg-surface-container-low px-margin-mobile md:px-margin-desktop border-t border-on-surface/5 reveal">
             <div class="max-w-container-max mx-auto">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="font-label-caps text-label-caps text-primary tracking-widest mb-3 block uppercase">Tim
-                        Peneliti</span>
                     <h2 class="font-headline-lg text-headline-lg text-primary-container">Anggota Kelompok</h2>
                     <p class="text-secondary mt-3 font-body-md max-w-xl mx-auto">
-                        Kolaborasi mahasiswa lintas program studi Universitas Sumatera Utara dalam penelitian,
+                        Kolaborasi mahasiswa lintas program studi Universitas Sumatera Utara dalam pembelajaran,
                         pelestarian, dan digitalisasi naskah kuno Aksara Labuhanbatu.
                     </p>
                 </div>
@@ -1004,8 +980,6 @@
             <div class="flex flex-col md:items-end justify-between">
                 <nav class="flex flex-wrap gap-x-8 gap-y-4 mb-8 md:mb-0">
                     <a class="text-on-secondary-fixed-variant font-label-caps text-label-caps hover:text-primary-container transition-all underline underline-offset-4"
-                        href="Aksara Labuhanbatu.pdf" target="_blank">Unduh Naskah</a>
-                    <a class="text-on-secondary-fixed-variant font-label-caps text-label-caps hover:text-primary-container transition-all underline underline-offset-4"
                         href="#">Panduan Sitasi</a>
                     <a class="text-on-secondary-fixed-variant font-label-caps text-label-caps hover:text-primary-container transition-all underline underline-offset-4"
                         href="#">Kontak</a>
@@ -1040,36 +1014,6 @@
         const pageBadge = document.getElementById('pageBadge');
         const pageCounter = document.getElementById('pageCounter');
         const resetBtn = document.getElementById('reset-book');
-        const transcriptionEl = document.getElementById('transcription-text');
-        const translationEl = document.getElementById('translation-text');
-
-        // Content for each page range
-        function getContent(page) {
-            if (page === 1) return {
-                trans: '[Halaman 1] Aksara pembuka naskah — kolofon otoritas sang Datu penulis naskah ini.',
-                translat: 'Halaman pertama memuat aksara pembuka yang berfungsi sebagai kolofon — identitas pengarang, waktu penulisan, dan tujuan pembuatan naskah. Aksara Labuhanbatu yang digunakan merupakan varian khas dialek Batak pesisir Labuhanbatu.'
-            };
-            if (page <= 5) return {
-                trans: '[Halaman ' + page + '] Bab pembukaan — mantra pelindung dan doa pembuka ritual kuno Labuhanbatu.',
-                translat: 'Bagian awal naskah ini berisi serangkaian mantra dan doa pelindung yang biasa dibacakan sebelum prosesi ritual adat. Aksara yang digunakan menunjukkan pengaruh kuat tradisi Batak Pesisir yang telah berusia ratusan tahun.'
-            };
-            if (page <= 12) return {
-                trans: '[Halaman ' + page + '] Sistem penanggalan adat — parihalaan dan petunjuk hari baik Labuhanbatu.',
-                translat: 'Halaman ini memuat sistem kalender dan penanggalan adat (parihalaan) yang digunakan masyarakat Labuhanbatu kuno untuk menentukan hari baik dalam berbagai kegiatan ritual, pertanian, dan sosial. Simbol-simbol aksara yang tertera merupakan penanda waktu yang unik.'
-            };
-            if (page <= 20) return {
-                trans: '[Halaman ' + page + '] Catatan ritual dan pengobatan — pengetahuan datu dalam aksara kuno.',
-                translat: 'Lembaran ini mencatat pengetahuan pengobatan tradisional dan prosedur ritual yang dilakukan oleh para Datu (tabib-pendeta adat). Setiap simbol aksara mewakili bahan, dosis, dan tata cara yang harus diikuti dengan ketat untuk menjaga kesakralan ritual.'
-            };
-            if (page <= 28) return {
-                trans: '[Halaman ' + page + '] Genealogi dan catatan silsilah — rekam jejak leluhur Labuhanbatu.',
-                translat: 'Bagian ini berisi catatan silsilah (genealogi) keluarga atau klan penting di Labuhanbatu. Penulisan aksara yang sangat rapi dan presisi menunjukkan bahwa bagian ini dianggap sangat penting dan sakral bagi komunitas pemilik naskah.'
-            };
-            return {
-                trans: '[Halaman ' + page + '] Penutup dan kolofon akhir — segel otentisitas naskah Aksara Labuhanbatu.',
-                translat: 'Halaman penutup naskah berisi kolofon akhir yang menegaskan keaslian dan otoritas naskah. Tanda aksara di sini berfungsi sebagai "segel" yang memastikan bahwa naskah ini adalah dokumen resmi yang sah menurut adat Labuhanbatu.'
-            };
-        }
 
         function updateUI() {
             pageBadge.textContent = 'HAL. ' + currentPage + ' / ' + TOTAL_PAGES;
@@ -1077,16 +1021,6 @@
             slider.value = currentPage;
             btnPrev.disabled = currentPage === 1;
             btnNext.disabled = currentPage === TOTAL_PAGES;
-
-            const content = getContent(currentPage);
-            transcriptionEl.style.opacity = '0';
-            translationEl.style.opacity = '0';
-            setTimeout(() => {
-                transcriptionEl.textContent = content.trans;
-                translationEl.textContent = content.translat;
-                transcriptionEl.style.opacity = '1';
-                translationEl.style.opacity = '1';
-            }, 280);
 
             // Sync with fullscreen UI if visible
             const fsOverlay = document.getElementById('fullscreenOverlay');
@@ -1177,8 +1111,7 @@
         const fsImgMain = document.getElementById('imgFsMain');
         const fsPageInd = document.getElementById('fs-page-indicator');
         const fsPageBad = document.getElementById('fs-page-badge');
-        const fsTrans = document.getElementById('fs-trans-text');
-        const fsTranslat = document.getElementById('fs-translat-text');
+
         const fsBtnPrev = document.getElementById('btnFsPrev');
         const fsBtnNext = document.getElementById('btnFsNext');
         const fsBtnPlay = document.getElementById('btnFsSlideshow');
@@ -1222,16 +1155,6 @@
             panX = 0;
             panY = 0;
             updateZoom();
-
-            const content = getContent(currentPage);
-            fsTrans.style.opacity = '0';
-            fsTranslat.style.opacity = '0';
-            setTimeout(() => {
-                fsTrans.textContent = content.trans;
-                fsTranslat.textContent = content.translat;
-                fsTrans.style.opacity = '1';
-                fsTranslat.style.opacity = '1';
-            }, 150);
         }
 
         function openFullscreen() {
