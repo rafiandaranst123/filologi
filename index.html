@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description"
+        content="Aksara Labuhanbatu — Penelitian, pelestarian, dan digitalisasi naskah kuno aksara Batak Labuhanbatu di kawasan Tanah Labuhanbatu." />
+    <meta name="keywords"
+        content="aksara labuhanbatu, naskah batak, filologi, digitalisasi naskah, batak toba, labuhanbatu" />
+    <title>Aksara Labuhanbatu: Naskah Kuno Batak</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Public+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#570000",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed": "#291801",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "surface-tint": "#b22b1d",
+                        "tertiary": "#362309",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2f312e",
+                        "on-background": "#1a1c19",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-secondary-fixed-variant": "#474646",
+                        "secondary-fixed": "#e5e2e1",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#e5e2e1",
+                        "surface-container-high": "#e8e8e3",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#4e391c",
+                        "on-secondary-container": "#656464",
+                        "surface-dim": "#dadad5",
+                        "surface-container-low": "#f4f4ef",
+                        "background": "#fafaf5",
+                        "surface-container": "#eeeee9",
+                        "on-tertiary-container": "#c1a27e",
+                        "inverse-on-surface": "#f1f1ec",
+                        "outline": "#8e706c",
+                        "inverse-primary": "#ffb4a8",
+                        "on-surface-variant": "#5a413d",
+                        "primary-fixed": "#ffdad4",
+                        "tertiary-fixed-dim": "#e2c19b",
+                        "on-tertiary-fixed-variant": "#594325",
+                        "on-primary-fixed": "#410000",
+                        "on-primary-fixed-variant": "#8f0707",
+                        "on-secondary": "#ffffff",
+                        "surface": "#fafaf5",
+                        "on-surface": "#1a1c19",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#800000",
+                        "outline-variant": "#e2bfb9",
+                        "on-primary-container": "#ff8371",
+                        "secondary": "#5f5e5e",
+                        "tertiary-fixed": "#ffddb6",
+                        "surface-variant": "#e3e3de",
+                        "surface-bright": "#fafaf5",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e3e3de"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["EB Garamond"],
+                        "body-md": ["Public Sans"],
+                        "headline-lg": ["EB Garamond"],
+                        "headline-md": ["EB Garamond"],
+                        "display-lg": ["EB Garamond"],
+                        "label-caps": ["Public Sans"],
+                        "body-lg": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            height: auto !important;
+        }
+
+        body {
+            min-height: 0 !important;
+            margin: 0;
+            padding: 0;
+            background-color: #fafaf5;
+        }
+
+        .ulos-divider {
+            height: 40px;
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDumNU8LunFgxGD5JB9yHZF5ft5a03lm3oU72N7EQqvbxJMqloi9empI-afS-ll6Cl1NqSRsvi0WF637WUj4gGAkzwffB7R2ushj2h_Udh9Vl_lTJcgJJf_m75Jnk5Wy3S8zCL-PsfOEGsheMEFccDJihpBsN8CJ2Y66bb_tJCTND240hRQBzy4kTIsNddYKSD0O_-cuLL7-dF-QMJCMpozWydOWh3okZSV-Djaeo_73EtWFKJ9C2UkIoVkdt8CXCU3wnnqTc9dKX0');
+            background-size: contain;
+            background-repeat: repeat-x;
+            opacity: 0.15;
+        }
+
+        .text-shadow-academic {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ============================
+           FLIPBOOK STYLES
+        ============================= */
+
+        .book-wrapper {
+            width: 100%;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .book-spread {
+            display: flex;
+            width: 100%;
+            height: 480px;
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, 0.25),
+                0 0 0 1px rgba(87, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            position: relative;
+            border-radius: 2px;
+        }
+
+        /* Book spine shadow in center */
+        .book-spread::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 8px;
+            height: 100%;
+            transform: translateX(-50%);
+            background: linear-gradient(to right,
+                    rgba(0, 0, 0, 0.12) 0%,
+                    rgba(0, 0, 0, 0.05) 30%,
+                    rgba(255, 255, 255, 0.3) 50%,
+                    rgba(0, 0, 0, 0.05) 70%,
+                    rgba(0, 0, 0, 0.12) 100%);
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        /* Left page — info panel */
+        .book-page-left {
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            background-image: url('https://www.transparenttextures.com/patterns/old-paper.png');
+            background-color: #f2ede0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 28px 24px;
+            box-sizing: border-box;
+            border-right: 1px solid rgba(87, 0, 0, 0.12);
+        }
+
+        .book-page-left::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/grain.png');
+            opacity: 0.25;
+            pointer-events: none;
+        }
+
+        /* Right page — flipping manuscript */
+        .book-page-right {
+            width: 50%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            background: #e8e4d4;
+        }
+
+        /* Perspective container for 3D flip */
+        .flip-stage {
+            perspective: 2200px;
+            perspective-origin: left center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        /* The actual flipper — holds front & back */
+        .flipper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform-origin: left center;
+            transition: transform 0.75s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        .flipper.is-flipping-next {
+            transform: rotateY(-180deg);
+        }
+
+        .flipper.is-flipping-prev {
+            transform: rotateY(180deg);
+        }
+
+        .flipper-front,
+        .flipper-back {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        .flipper-front img,
+        .flipper-back img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #f4f4ef;
+            display: block;
+        }
+
+        .flipper-back {
+            transform: rotateY(180deg);
+        }
+
+        /* Page curl shadow on right edge of left page */
+        .book-page-right::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.08), transparent);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Page number badge */
+        .page-badge {
+            position: absolute;
+            bottom: 12px;
+            right: 14px;
+            background: rgba(87, 0, 0, 0.85);
+            color: white;
+            font-size: 10px;
+            font-family: 'Public Sans', sans-serif;
+            letter-spacing: 0.1em;
+            padding: 4px 10px;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        /* Navigation bar below book */
+        .book-nav {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .book-nav button {
+            background: transparent;
+            border: 1px solid rgba(87, 0, 0, 0.3);
+            color: #570000;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex-shrink: 0;
+            font-size: 20px;
+        }
+
+        .book-nav button:hover:not(:disabled) {
+            background: #570000;
+            color: white;
+            border-color: #570000;
+        }
+
+        .book-nav button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .book-nav input[type=range] {
+            flex: 1;
+            accent-color: #570000;
+            height: 2px;
+            cursor: pointer;
+        }
+
+        /* ============================
+           REVEAL ANIMATION
+        ============================= */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================
+           PARCHMENT
+        ============================= */
+        .parchment-bg {
+            background-image: url('https://www.transparenttextures.com/patterns/old-paper.png');
+            background-color: #f7f3e9;
+            position: relative;
+        }
+
+        .parchment-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/grain.png');
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* ============================
+           TRANSCRIPTION FADE
+        ============================= */
+        #transcription-text,
+        #translation-text {
+            transition: opacity 0.3s ease;
+        }
+
+        /* ============================
+           MOBILE BOOK
+        ============================= */
+        @media (max-width: 640px) {
+            .book-spread {
+                height: 320px;
+            }
+
+            .book-page-left {
+                display: none;
+            }
+
+            .book-page-right {
+                width: 100%;
+            }
+
+            .book-spread::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- Fullscreen Presentation Overlay -->
+    <div id="fullscreenOverlay" class="fixed inset-0 bg-stone-950 z-[9999] hidden flex-col justify-between p-4 md:p-6 select-none transition-opacity duration-300 opacity-0 text-stone-300 font-body-md" style="background-color: #0f0e0c;">
+        <!-- Top bar -->
+        <div class="flex justify-between items-center w-full border-b border-white/10 pb-4 text-white">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary-container text-2xl">auto_stories</span>
+                <div>
+                    <h4 class="font-headline-md text-base md:text-lg tracking-wider uppercase text-stone-200">Mode Presentasi Aksara Labuhanbatu</h4>
+                    <p class="text-xs text-stone-400 font-body-md" id="fs-page-indicator">Halaman 1 dari 33</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <!-- Slideshow Play/Pause -->
+                <button id="btnFsSlideshow" class="flex items-center gap-2 border border-white/20 px-4 py-2 text-xs font-label-caps hover:bg-white/10 transition-all rounded" title="Mainkan otomatis">
+                    <span class="material-symbols-outlined text-sm">play_arrow</span> MULAI SLIDESHOW
+                </button>
+                <!-- Zoom Controls -->
+                <div class="flex items-center border border-white/20 rounded overflow-hidden">
+                    <button id="btnFsZoomOut" class="flex items-center justify-center p-2 hover:bg-white/10 text-stone-300 transition-all cursor-pointer" title="Perkecil">
+                        <span class="material-symbols-outlined text-sm">zoom_out</span>
+                    </button>
+                    <button id="btnFsZoomReset" class="flex items-center justify-center px-2.5 py-2 hover:bg-white/10 text-stone-300 text-xs font-mono border-x border-white/20 transition-all cursor-pointer" title="Reset Zoom">
+                        100%
+                    </button>
+                    <button id="btnFsZoomIn" class="flex items-center justify-center p-2 hover:bg-white/10 text-stone-300 transition-all cursor-pointer" title="Perbesar">
+                        <span class="material-symbols-outlined text-sm">zoom_in</span>
+                    </button>
+                </div>
+                <!-- Native Fullscreen Toggle -->
+                <button id="btnFsToggleNative" class="flex items-center justify-center border border-white/20 p-2 hover:bg-white/10 transition-all rounded cursor-pointer" title="Ganti browser fullscreen">
+                    <span class="material-symbols-outlined text-sm">fullscreen</span>
+                </button>
+                <!-- Close Button -->
+                <button id="btnFsClose" class="bg-primary text-white flex items-center justify-center p-2.5 rounded hover:bg-primary-container transition-all cursor-pointer">
+                    <span class="material-symbols-outlined text-base">close</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Middle Content Area (Manuscript Display) -->
+        <div class="flex-1 flex items-center justify-center relative my-4 w-full max-w-6xl mx-auto">
+            <!-- Left floating arrow -->
+            <button id="btnFsPrev" class="absolute left-0 md:left-4 z-10 w-16 h-16 rounded-full bg-black/60 border border-white/10 text-white flex items-center justify-center hover:bg-primary hover:scale-110 active:scale-95 transition-all disabled:opacity-20 disabled:cursor-not-allowed cursor-pointer">
+                <span class="material-symbols-outlined text-3xl">navigate_before</span>
+            </button>
+
+            <!-- Centered Image Panel with subtle shadow and border -->
+            <div id="fsImageContainer" class="h-[46vh] md:h-[50vh] aspect-[3/4] bg-stone-900 border border-white/15 shadow-2xl relative overflow-hidden rounded flex items-center justify-center">
+                <img id="imgFsMain" src="pages/page_1.png" alt="Halaman Presentasi" class="max-w-full max-h-full object-contain transition-transform duration-200 origin-center select-none" />
+                <div class="absolute bottom-4 right-4 bg-black/75 px-3 py-1 rounded text-[10px] tracking-widest text-stone-300 font-mono z-20" id="fs-page-badge">HAL. 1 / 33</div>
+            </div>
+
+            <!-- Right floating arrow -->
+            <button id="btnFsNext" class="absolute right-0 md:right-4 z-10 w-16 h-16 rounded-full bg-black/60 border border-white/10 text-white flex items-center justify-center hover:bg-primary hover:scale-110 active:scale-95 transition-all disabled:opacity-20 disabled:cursor-not-allowed cursor-pointer">
+                <span class="material-symbols-outlined text-3xl">navigate_next</span>
+            </button>
+        </div>
+
+        <!-- Bottom Transcript & Translation area -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-6xl mx-auto bg-stone-900/60 border border-white/10 p-4 md:p-5 rounded backdrop-blur-md text-stone-300">
+            <div class="border-l-2 border-primary pl-3">
+                <h5 class="font-label-caps text-[10px] tracking-widest text-primary-container mb-1.5 uppercase">Transkripsi Diplomatik</h5>
+                <p id="fs-trans-text" class="font-headline-md text-xs md:text-sm italic leading-relaxed text-stone-200 transition-opacity duration-300">
+                    [Halaman 1] Aksara pembuka naskah Labuhanbatu...
+                </p>
+            </div>
+            <div class="border-l-2 border-white/20 pl-3">
+                <h5 class="font-label-caps text-[10px] tracking-widest text-stone-400 mb-1.5 uppercase">Terjemahan Bahasa Indonesia</h5>
+                <p id="fs-translat-text" class="font-body-md text-[11px] md:text-xs leading-relaxed text-stone-400 transition-opacity duration-300">
+                    Halaman pertama naskah ini memuat aksara pembuka yang berfungsi sebagai kolofon...
+                </p>
+            </div>
+        </div>
+    </div>
+    <header class="bg-surface/90 backdrop-blur-md top-0 sticky z-50 border-b border-on-surface/10">
+        <div
+            class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+            <div class="font-headline-md text-lg md:text-headline-md text-primary-container uppercase tracking-widest">
+                Aksara Labuhanbatu
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a class="text-secondary font-label-caps text-label-caps transition-colors duration-300 hover:text-primary-container"
+                    href="#manuscripts">Naskah</a>
+                <a class="text-secondary font-label-caps text-label-caps transition-colors duration-300 hover:text-primary-container"
+                    href="#biography">Biografi</a>
+                <a class="text-secondary font-label-caps text-label-caps transition-colors duration-300 hover:text-primary-container"
+                    href="#video-documentation">Video</a>
+                <a class="text-secondary font-label-caps text-label-caps transition-colors duration-300 hover:text-primary-container"
+                    href="#team">Tim</a>
+            </nav>
+            <a href="Aksara Labuhanbatu.pdf" target="_blank"
+                class="bg-primary-container text-on-primary-container px-4 py-2 md:px-6 md:py-2 font-label-caps text-[10px] md:text-label-caps transition-all hover:scale-105 active:scale-95 no-underline">
+                Unduh PDF
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section class="relative h-[90vh] flex items-center justify-center overflow-hidden bg-primary">
+            <div class="absolute inset-0 z-0">
+                <img alt="Intricate Ulos-inspired pattern"
+                    class="w-full h-full object-cover opacity-60 mix-blend-multiply scale-105 animate-[pulse_10s_infinite]"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDumNU8LunFgxGD5JB9yHZF5ft5a03lm3oU72N7EQqvbxJMqloi9empI-afS-ll6Cl1NqSRsvi0WF637WUj4gGAkzwffB7R2ushj2h_Udh9Vl_lTJcgJJf_m75Jnk5Wy3S8zCL-PsfOEGsheMEFccDJihpBsN8CJ2Y66bb_tJCTND240hRQBzy4kTIsNddYKSD0O_-cuLL7-dF-QMJCMpozWydOWh3okZSV-Djaeo_73EtWFKJ9C2UkIoVkdt8CXCU3wnnqTc9dKX0" />
+                <div class="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/30 to-primary/85"></div>
+            </div>
+            <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-4xl">
+                <span
+                    class="block font-label-caps text-label-caps text-on-primary-container mb-4 tracking-[0.3em] drop-shadow-sm reveal">INSTITUT
+                    PENELITIAN FILOLOGI</span>
+                <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6 leading-tight text-shadow-academic reveal"
+                    style="transition-delay: 200ms;">Aksara Labuhanbatu: Naskah Kuno Batak</h1>
+                <div class="w-24 h-1 bg-on-primary-container mx-auto mb-8 reveal" style="transition-delay: 400ms;">
+                </div>
+                <p class="font-headline-md text-headline-md text-primary-fixed-dim italic drop-shadow-sm reveal"
+                    style="transition-delay: 600ms;">"Penelitian dan Pelestarian Aksara Kuno Labuhanbatu"</p>
+            </div>
+        </section>
+
+        <div class="ulos-divider"></div>
+
+        <!-- Section 2: Flipbook Naskah -->
+        <section id="manuscripts"
+            class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal">
+            <div class="flex flex-col lg:flex-row gap-16 items-start">
+
+                <!-- LEFT: Flipbook -->
+                <div class="lg:w-1/2 w-full flex flex-col">
+                    <div class="mb-8">
+                        <span
+                            class="font-label-caps text-label-caps text-primary tracking-widest mb-2 block uppercase">Koleksi
+                            Digital</span>
+                        <h2 class="font-headline-lg text-headline-lg">Aksara Labuhanbatu</h2>
+                        <p class="text-secondary mt-2 italic font-body-md">Klik tombol untuk membalik halaman naskah</p>
+                    </div>
+
+                    <!-- Book spread -->
+                    <div class="book-wrapper">
+                        <div class="book-spread" id="bookSpread">
+                            <!-- Left page: info panel -->
+                            <div class="book-page-left" style="position:relative;">
+                                <div style="position:relative;z-index:2;">
+                                    <p
+                                        class="font-label-caps text-[10px] tracking-widest text-primary/60 uppercase mb-3">
+                                        Aksara Labuhanbatu</p>
+                                    <h3 class="font-headline-md text-xl text-primary leading-tight mb-4">Katalog Naskah
+                                        Kuno</h3>
+                                    <div class="w-8 h-0.5 bg-primary/30 mb-4"></div>
+                                    <p class="font-serif italic text-xs text-on-surface/60 leading-relaxed"
+                                        id="leftPageNote">
+                                        Naskah Aksara Labuhanbatu merupakan warisan budaya tulis dari kawasan
+                                        Labuhanbatu, Sumatera Utara. Ditulis pada medium tradisional dengan aksara Batak
+                                        yang khas.
+                                    </p>
+                                </div>
+                                <div style="position:relative;z-index:2;" class="text-center">
+                                    <span class="material-symbols-outlined text-4xl text-primary/20">menu_book</span>
+                                    <p
+                                        class="font-label-caps text-[9px] tracking-widest text-primary/40 uppercase mt-2">
+                                        Labuhanbatu Heritage</p>
+                                </div>
+                            </div>
+
+                            <!-- Right page: flipbook -->
+                            <div class="book-page-right">
+                                <div class="flip-stage">
+                                    <div class="flipper" id="flipper">
+                                        <div class="flipper-front" id="flipperFront">
+                                            <img id="imgFront" src="pages/page_1.png" alt="Halaman 1" />
+                                        </div>
+                                        <div class="flipper-back" id="flipperBack">
+                                            <img id="imgBack" src="pages/page_2.png" alt="Halaman 2" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-badge" id="pageBadge">HAL. 1 / 33</div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation -->
+                        <div class="book-nav">
+                            <button id="btnPrev" title="Halaman sebelumnya" disabled>
+                                <span class="material-symbols-outlined">navigate_before</span>
+                            </button>
+                            <input type="range" id="pageSlider" min="1" max="33" value="1" />
+                            <button id="btnNext" title="Halaman berikutnya">
+                                <span class="material-symbols-outlined">navigate_next</span>
+                            </button>
+                        </div>
+
+                        <!-- Page counter text -->
+                        <div class="flex justify-between mt-3 px-1">
+                            <span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider">Naskah
+                                Aksara Labuhanbatu</span>
+                            <span class="font-label-caps text-[10px] text-secondary uppercase tracking-wider"
+                                id="pageCounter">Halaman 1 dari 33</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Transcription + Translation -->
+                <div class="lg:w-1/2 flex flex-col justify-start space-y-6 w-full lg:pt-24">
+                    <div
+                        class="bg-surface-container-highest p-8 border-l-4 border-primary shadow-sm relative overflow-hidden">
+                        <h3 class="font-label-caps text-label-caps mb-4 text-primary relative z-10">TRANSKRIPSI
+                            DIPLOMATIK</h3>
+                        <p class="font-headline-md text-xl italic text-on-surface/90 leading-relaxed relative z-10"
+                            id="transcription-text">
+                            [Halaman 1] Aksara pembuka naskah Labuhanbatu — simbol pelindung dan penanda otoritas sang
+                            Datu penulis naskah ini.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-8 border border-on-surface/5 shadow-sm transform transition-all hover:shadow-md">
+                        <h3 class="font-label-caps text-label-caps mb-4 text-primary">TERJEMAHAN BAHASA INDONESIA</h3>
+                        <p class="font-body-md text-body-md text-on-surface/70 leading-loose" id="translation-text">
+                            Halaman pertama naskah ini memuat aksara pembuka yang berfungsi sebagai kolofon — identitas
+                            pengarang, waktu penulisan, dan tujuan pembuatan naskah. Aksara Labuhanbatu yang digunakan
+                            merupakan varian khas dialek Batak di kawasan pesisir Labuhanbatu.
+                        </p>
+                    </div>
+                    <div class="flex gap-4 flex-wrap">
+                        <button
+                            class="bg-primary text-white px-6 py-4 font-label-caps text-label-caps hover:bg-primary-container transition-all flex items-center gap-2 cursor-pointer shadow"
+                            id="btn-fullscreen">
+                            <span class="material-symbols-outlined text-sm">fullscreen</span> PRESENTASI FULLSCREEN
+                        </button>
+                        <a href="Aksara Labuhanbatu.pdf" target="_blank"
+                            class="border border-outline text-outline px-6 py-4 font-label-caps text-[12px] hover:bg-surface-container transition-all flex items-center gap-2 no-underline">
+                            <span class="material-symbols-outlined text-sm">download</span> UNDUH PDF
+                        </a>
+                        <button
+                            class="border border-outline text-outline px-4 py-4 font-label-caps text-[12px] hover:bg-surface-container transition-all"
+                            id="reset-book">
+                            RESET
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Biography -->
+        <section id="biography" class="py-32 relative overflow-hidden parchment-bg">
+            <div
+                class="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform translate-x-20 pointer-events-none">
+            </div>
+            <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <!-- Immersive Visual Composition -->
+                    <div class="lg:col-span-6 relative h-[600px] flex items-center justify-center reveal">
+                        <div
+                            class="absolute z-10 top-0 left-0 w-64 h-64 bg-surface-container-highest border border-primary/10 shadow-2xl p-4 rotate-[-6deg] transition-transform hover:rotate-0 duration-500">
+                            <img alt="Aksara Labuhanbatu — Detail"
+                                class="w-full h-full object-cover grayscale opacity-80" src="pages/page_5.png" />
+                        </div>
+                        <div
+                            class="relative z-20 w-4/5 aspect-[4/5] bg-white shadow-2xl overflow-hidden border-[12px] border-white group">
+                            <img alt="Koleksi Naskah Aksara Labuhanbatu"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                src="pages/page_10.png" />
+                            <div
+                                class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                            </div>
+                        </div>
+                        <div class="absolute z-30 bottom-10 right-0 w-48 h-48 bg-primary text-white p-6 flex flex-col justify-center rotate-[8deg] shadow-2xl reveal"
+                            style="transition-delay: 400ms;">
+                            <span class="font-display-lg text-4xl block">33</span>
+                            <span class="font-label-caps text-[10px] tracking-[0.2em]">HALAMAN NASKAH</span>
+                        </div>
+                    </div>
+
+                    <!-- Content Area -->
+                    <div class="lg:col-span-6 space-y-10 reveal" style="transition-delay: 200ms;">
+                        <div>
+                            <span class="font-label-caps text-primary mb-4 block tracking-widest uppercase">Sejarah &
+                                Asal-Usul</span>
+                            <h2 class="font-display-lg text-4xl md:text-6xl text-primary-container leading-[1.1] mb-6">
+                                Biografi
+                                Naskah & Aksara Labuhanbatu</h2>
+                        </div>
+                        <div class="relative pl-12 border-l-2 border-primary/20">
+                            <span
+                                class="material-symbols-outlined absolute left-0 -top-2 text-4xl text-primary/30">format_quote</span>
+                            <p class="font-display-lg text-3xl italic text-on-surface-variant leading-relaxed">
+                                "Naskah ini bukan sekadar tulisan, ia adalah detak jantung intelektual masyarakat Batak
+                                di pesisir Labuhanbatu yang terpatri dalam lembaran kuno."
+                            </p>
+                        </div>
+                        <div class="space-y-6 font-body-lg text-on-surface/80 max-w-xl">
+                            <p>
+                                Aksara <strong>Labuhanbatu</strong> merupakan sistem tulisan tradisional yang berkembang
+                                di wilayah Labuhanbatu, Sumatera Utara. Naskah ini ditulis menggunakan tinta organik di
+                                atas medium tradisional, mencerminkan kearifan lokal leluhur Batak yang kaya.
+                            </p>
+                            <p class="font-body-md">
+                                Melalui restorasi digital dan analisis filologi, tim kami mengungkap lapisan makna yang
+                                tersembunyi — dari mantra pelindung, sistem penanggalan, hingga catatan sejarah lokal
+                                yang belum pernah dipublikasikan sebelumnya.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-8 pt-8 border-t border-primary/10">
+                            <div class="group">
+                                <span
+                                    class="font-label-caps text-primary block mb-1 group-hover:translate-x-1 transition-transform">ASAL</span>
+                                <span class="font-headline-md text-xl">Labuhanbatu, Sumut</span>
+                            </div>
+                            <div class="group">
+                                <span
+                                    class="font-label-caps text-primary block mb-1 group-hover:translate-x-1 transition-transform">AKSARA</span>
+                                <span class="font-headline-md text-xl">Batak Labuhanbatu</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Dokumentasi Video -->
+        <section id="video-documentation" class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="font-label-caps text-label-caps text-primary tracking-widest mb-3 block uppercase">Dokumentasi Proyek</span>
+                <h2 class="font-headline-lg text-headline-lg text-primary-container">Video Penelitian & Pengkajian</h2>
+                <p class="text-secondary mt-3 font-body-md max-w-xl mx-auto">
+                    Simak proses penelusuran, digitalisasi, dan analisis naskah kuno Aksara Labuhanbatu secara langsung melalui video dokumentasi di bawah ini.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="relative aspect-video w-full bg-stone-900 shadow-2xl rounded-xl overflow-hidden border border-primary/10 group">
+                    <!-- Video Background Overlay -->
+                    <div class="absolute inset-0 bg-cover bg-center opacity-60 mix-blend-luminosity group-hover:opacity-40 transition-opacity duration-500"
+                         style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDumNU8LunFgxGD5JB9yHZF5ft5a03lm3oU72N7EQqvbxJMqloi9empI-afS-ll6Cl1NqSRsvi0WF637WUj4gGAkzwffB7R2ushj2h_Udh9Vl_lTJcgJJf_m75Jnk5Wy3S8zCL-PsfOEGsheMEFccDJihpBsN8CJ2Y66bb_tJCTND240hRQBzy4kTIsNddYKSD0O_-cuLL7-dF-QMJCMpozWydOWh3okZSV-Djaeo_73EtWFKJ9C2UkIoVkdt8CXCU3wnnqTc9dKX0');">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40"></div>
+                    
+                    <!-- Center Play Button -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center z-10 text-white">
+                        <button class="w-20 h-20 rounded-full bg-primary/95 text-white flex items-center justify-center shadow-lg transform transition-all duration-300 hover:scale-110 active:scale-95 hover:bg-primary-container group/btn mb-4">
+                            <span class="material-symbols-outlined text-4xl ml-1 fill-1">play_arrow</span>
+                        </button>
+                        <span class="font-label-caps text-xs tracking-[0.2em] text-stone-300">PUTAR VIDEO DOKUMENTASI</span>
+                    </div>
+
+                    <!-- Video Controls Placeholder -->
+                    <div class="absolute bottom-0 inset-x-0 p-6 flex items-center justify-between z-10 bg-gradient-to-t from-black/90 to-transparent">
+                        <div class="flex items-center gap-4 text-white/80">
+                            <span class="material-symbols-outlined cursor-pointer hover:text-white">play_arrow</span>
+                            <span class="material-symbols-outlined cursor-pointer hover:text-white">volume_up</span>
+                            <span class="text-xs font-mono">00:00 / 08:45</span>
+                        </div>
+                        <div class="flex-1 mx-6 h-1 bg-white/20 rounded-full overflow-hidden relative cursor-pointer group/bar">
+                            <div class="absolute left-0 top-0 h-full w-1/3 bg-primary group-hover/bar:bg-primary-fixed transition-colors"></div>
+                        </div>
+                        <div class="flex items-center gap-4 text-white/80">
+                            <span class="material-symbols-outlined cursor-pointer hover:text-white">settings</span>
+                            <span class="material-symbols-outlined cursor-pointer hover:text-white">fullscreen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="ulos-divider"></div>
+
+        <!-- Section 5: Anggota Kelompok -->
+        <section id="team" class="py-24 bg-surface-container-low px-margin-mobile md:px-margin-desktop border-t border-on-surface/5 reveal">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="font-label-caps text-label-caps text-primary tracking-widest mb-3 block uppercase">Tim Peneliti</span>
+                    <h2 class="font-headline-lg text-headline-lg text-primary-container">Anggota Kelompok</h2>
+                    <p class="text-secondary mt-3 font-body-md max-w-xl mx-auto">
+                        Kolaborasi mahasiswa lintas program studi Universitas Sumatera Utara dalam penelitian, pelestarian, dan digitalisasi naskah kuno Aksara Labuhanbatu.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <!-- Member 1 -->
+                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">JS</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Jhons Steven</h3>
+                            <p class="text-xs text-secondary mt-1">NIM. 240703011</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-on-surface/5">
+                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Sastra Batak</span>
+                        </div>
+                    </div>
+
+                    <!-- Member 2 -->
+                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">G</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Gunawan</h3>
+                            <p class="text-xs text-secondary mt-1">NIM. 240904060</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-on-surface/5">
+                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu Komunikasi</span>
+                        </div>
+                    </div>
+
+                    <!-- Member 3 -->
+                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">KO</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Khansa Fazian Oneal</h3>
+                            <p class="text-xs text-secondary mt-1">NIM. 240904066</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-on-surface/5">
+                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu Komunikasi</span>
+                        </div>
+                    </div>
+
+                    <!-- Member 4 -->
+                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">JD</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Juan Putra Hamdani Daulay</h3>
+                            <p class="text-xs text-secondary mt-1">NIM. 240904004</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-on-surface/5">
+                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu Komunikasi</span>
+                        </div>
+                    </div>
+
+                    <!-- Member 5 -->
+                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">DM</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Dzakwan Al Matin</h3>
+                            <p class="text-xs text-secondary mt-1">NIM. 240904105</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-on-surface/5">
+                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu Komunikasi</span>
+                        </div>
+                    </div>
+
+                    <!-- Member 6 -->
+                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">RN</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Rafi Andara Nst</h3>
+                            <p class="text-xs text-secondary mt-1">NIM. 241402095</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-on-surface/5">
+                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Teknologi Informasi</span>
+                        </div>
+                    </div>
+
+                    <!-- Member 7 -->
+                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">KP</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Ketrin Br Purba</h3>
+                            <p class="text-xs text-secondary mt-1">NIM. 240709021</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-on-surface/5">
+                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu Perpustakaan</span>
+                        </div>
+                    </div>
+
+                    <!-- Member 8 -->
+                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">LP</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Lestari Nauli Pasaribu</h3>
+                            <p class="text-xs text-secondary mt-1">NIM. 240709035</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-on-surface/5">
+                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ilmu Perpustakaan</span>
+                        </div>
+                    </div>
+
+                    <!-- Member 9 -->
+                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">WA</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Wahyu Saleh Alfarisyi</h3>
+                            <p class="text-xs text-secondary mt-1">NIM. 240501060</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-on-surface/5">
+                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Ekonomi/Sastra</span>
+                        </div>
+                    </div>
+
+                    <!-- Member 10 -->
+                    <div class="bg-white p-6 border border-on-surface/5 shadow-sm rounded-lg flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                        <div>
+                            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-display-lg text-xl mb-4 font-bold">KG</div>
+                            <h3 class="font-headline-md text-base text-primary-container font-semibold leading-tight">Keisha Gea</h3>
+                            <p class="text-xs text-secondary mt-1">NIM. 240710024</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-on-surface/5">
+                            <span class="inline-block bg-primary/5 text-primary text-[10px] font-label-caps py-1 px-2.5 rounded">Sastra/Komunikasi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer
+        class="bg-surface-container-highest dark:bg-inverse-surface border-t border-on-surface/10 mt-margin-desktop">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto w-full">
+            <div class="space-y-6">
+                <div class="font-headline-md text-headline-md text-primary-container">
+                    Aksara Labuhanbatu
+                </div>
+                <p class="font-body-md text-body-md text-on-surface dark:text-inverse-on-surface max-w-md">
+                    © 2024 Aksara Labuhanbatu — Institut Penelitian Filologi Batak. Didedikasikan untuk pelestarian
+                    warisan aksara dan naskah kuno Labuhanbatu, Sumatera Utara.
+                </p>
+            </div>
+            <div class="flex flex-col md:items-end justify-between">
+                <nav class="flex flex-wrap gap-x-8 gap-y-4 mb-8 md:mb-0">
+                    <a class="text-on-secondary-fixed-variant font-label-caps text-label-caps hover:text-primary-container transition-all underline underline-offset-4"
+                        href="Aksara Labuhanbatu.pdf" target="_blank">Unduh Naskah</a>
+                    <a class="text-on-secondary-fixed-variant font-label-caps text-label-caps hover:text-primary-container transition-all underline underline-offset-4"
+                        href="#">Panduan Sitasi</a>
+                    <a class="text-on-secondary-fixed-variant font-label-caps text-label-caps hover:text-primary-container transition-all underline underline-offset-4"
+                        href="#">Kontak</a>
+                </nav>
+                <div class="flex space-x-6 mt-8">
+                    <span
+                        class="material-symbols-outlined text-primary-container hover:scale-125 transition-transform cursor-pointer">auto_stories</span>
+                    <span
+                        class="material-symbols-outlined text-primary-container hover:scale-125 transition-transform cursor-pointer">history_edu</span>
+                    <span
+                        class="material-symbols-outlined text-primary-container hover:scale-125 transition-transform cursor-pointer">museum</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ========================================
+        // FLIPBOOK — 33 Halaman Aksara Labuhanbatu
+        // ========================================
+
+        const TOTAL_PAGES = 33;
+        let currentPage = 1;
+        let isAnimating = false;
+
+        const flipper = document.getElementById('flipper');
+        const imgFront = document.getElementById('imgFront');
+        const imgBack = document.getElementById('imgBack');
+        const btnPrev = document.getElementById('btnPrev');
+        const btnNext = document.getElementById('btnNext');
+        const slider = document.getElementById('pageSlider');
+        const pageBadge = document.getElementById('pageBadge');
+        const pageCounter = document.getElementById('pageCounter');
+        const resetBtn = document.getElementById('reset-book');
+        const transcriptionEl = document.getElementById('transcription-text');
+        const translationEl = document.getElementById('translation-text');
+
+        // Content for each page range
+        function getContent(page) {
+            if (page === 1) return {
+                trans: '[Halaman 1] Aksara pembuka naskah — kolofon otoritas sang Datu penulis naskah ini.',
+                translat: 'Halaman pertama memuat aksara pembuka yang berfungsi sebagai kolofon — identitas pengarang, waktu penulisan, dan tujuan pembuatan naskah. Aksara Labuhanbatu yang digunakan merupakan varian khas dialek Batak pesisir Labuhanbatu.'
+            };
+            if (page <= 5) return {
+                trans: '[Halaman ' + page + '] Bab pembukaan — mantra pelindung dan doa pembuka ritual kuno Labuhanbatu.',
+                translat: 'Bagian awal naskah ini berisi serangkaian mantra dan doa pelindung yang biasa dibacakan sebelum prosesi ritual adat. Aksara yang digunakan menunjukkan pengaruh kuat tradisi Batak Pesisir yang telah berusia ratusan tahun.'
+            };
+            if (page <= 12) return {
+                trans: '[Halaman ' + page + '] Sistem penanggalan adat — parihalaan dan petunjuk hari baik Labuhanbatu.',
+                translat: 'Halaman ini memuat sistem kalender dan penanggalan adat (parihalaan) yang digunakan masyarakat Labuhanbatu kuno untuk menentukan hari baik dalam berbagai kegiatan ritual, pertanian, dan sosial. Simbol-simbol aksara yang tertera merupakan penanda waktu yang unik.'
+            };
+            if (page <= 20) return {
+                trans: '[Halaman ' + page + '] Catatan ritual dan pengobatan — pengetahuan datu dalam aksara kuno.',
+                translat: 'Lembaran ini mencatat pengetahuan pengobatan tradisional dan prosedur ritual yang dilakukan oleh para Datu (tabib-pendeta adat). Setiap simbol aksara mewakili bahan, dosis, dan tata cara yang harus diikuti dengan ketat untuk menjaga kesakralan ritual.'
+            };
+            if (page <= 28) return {
+                trans: '[Halaman ' + page + '] Genealogi dan catatan silsilah — rekam jejak leluhur Labuhanbatu.',
+                translat: 'Bagian ini berisi catatan silsilah (genealogi) keluarga atau klan penting di Labuhanbatu. Penulisan aksara yang sangat rapi dan presisi menunjukkan bahwa bagian ini dianggap sangat penting dan sakral bagi komunitas pemilik naskah.'
+            };
+            return {
+                trans: '[Halaman ' + page + '] Penutup dan kolofon akhir — segel otentisitas naskah Aksara Labuhanbatu.',
+                translat: 'Halaman penutup naskah berisi kolofon akhir yang menegaskan keaslian dan otoritas naskah. Tanda aksara di sini berfungsi sebagai "segel" yang memastikan bahwa naskah ini adalah dokumen resmi yang sah menurut adat Labuhanbatu.'
+            };
+        }
+
+        function updateUI() {
+            pageBadge.textContent = 'HAL. ' + currentPage + ' / ' + TOTAL_PAGES;
+            pageCounter.textContent = 'Halaman ' + currentPage + ' dari ' + TOTAL_PAGES;
+            slider.value = currentPage;
+            btnPrev.disabled = currentPage === 1;
+            btnNext.disabled = currentPage === TOTAL_PAGES;
+
+            const content = getContent(currentPage);
+            transcriptionEl.style.opacity = '0';
+            translationEl.style.opacity = '0';
+            setTimeout(() => {
+                transcriptionEl.textContent = content.trans;
+                translationEl.textContent = content.translat;
+                transcriptionEl.style.opacity = '1';
+                translationEl.style.opacity = '1';
+            }, 280);
+
+            // Sync with fullscreen UI if visible
+            const fsOverlay = document.getElementById('fullscreenOverlay');
+            if (fsOverlay && !fsOverlay.classList.contains('hidden')) {
+                updateFullscreenUI();
+            }
+        }
+
+        function goToPage(targetPage, direction) {
+            if (isAnimating || targetPage < 1 || targetPage > TOTAL_PAGES || targetPage === currentPage) return;
+            isAnimating = true;
+
+            // Preload the target image into the back face
+            imgBack.src = 'pages/page_' + targetPage + '.png';
+            imgBack.alt = 'Halaman ' + targetPage;
+
+            // Add flip class
+            const flipClass = direction === 'next' ? 'is-flipping-next' : 'is-flipping-prev';
+            flipper.classList.add(flipClass);
+
+            // After animation, swap and reset
+            setTimeout(() => {
+                // Snap front to new page without transition
+                flipper.style.transition = 'none';
+                flipper.classList.remove(flipClass);
+                imgFront.src = 'pages/page_' + targetPage + '.png';
+                imgFront.alt = 'Halaman ' + targetPage;
+
+                // Preload next/prev into back for future flip
+                const nextPreload = direction === 'next'
+                    ? Math.min(targetPage + 1, TOTAL_PAGES)
+                    : Math.max(targetPage - 1, 1);
+                imgBack.src = 'pages/page_' + nextPreload + '.png';
+
+                // Re-enable transition
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        flipper.style.transition = '';
+                        isAnimating = false;
+                    });
+                });
+
+                currentPage = targetPage;
+                updateUI();
+            }, 750);
+        }
+
+        btnNext.addEventListener('click', () => goToPage(currentPage + 1, 'next'));
+        btnPrev.addEventListener('click', () => goToPage(currentPage - 1, 'prev'));
+
+        slider.addEventListener('input', function () {
+            const target = parseInt(this.value);
+            if (target !== currentPage) {
+                goToPage(target, target > currentPage ? 'next' : 'prev');
+            }
+        });
+
+        resetBtn.addEventListener('click', () => {
+            if (currentPage !== 1) goToPage(1, 'prev');
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!fsOverlay.classList.contains('hidden')) {
+                if (e.key === 'Escape') closeFullscreen();
+                if (e.key === 'ArrowRight' && currentPage < TOTAL_PAGES) {
+                    goToPage(currentPage + 1, 'next');
+                }
+                if (e.key === 'ArrowLeft' && currentPage > 1) {
+                    goToPage(currentPage - 1, 'prev');
+                }
+            } else {
+                if (e.key === 'ArrowRight' && currentPage < TOTAL_PAGES) {
+                    goToPage(currentPage + 1, 'next');
+                }
+                if (e.key === 'ArrowLeft' && currentPage > 1) {
+                    goToPage(currentPage - 1, 'prev');
+                }
+            }
+        });
+
+        // ========================================
+        // MODE PRESENTASI FULLSCREEN
+        // ========================================
+
+        const fsOverlay     = document.getElementById('fullscreenOverlay');
+        const fsBtnOpen     = document.getElementById('btn-fullscreen');
+        const fsBtnClose    = document.getElementById('btnFsClose');
+        const fsImgMain     = document.getElementById('imgFsMain');
+        const fsPageInd     = document.getElementById('fs-page-indicator');
+        const fsPageBad     = document.getElementById('fs-page-badge');
+        const fsTrans       = document.getElementById('fs-trans-text');
+        const fsTranslat    = document.getElementById('fs-translat-text');
+        const fsBtnPrev     = document.getElementById('btnFsPrev');
+        const fsBtnNext     = document.getElementById('btnFsNext');
+        const fsBtnPlay     = document.getElementById('btnFsSlideshow');
+        const fsBtnNative   = document.getElementById('btnFsToggleNative');
+
+        let slideshowInterval = null;
+        let isSlideshowPlaying = false;
+
+        // Zoom & Pan variables
+        let zoomLevel = 1.0;
+        let panX = 0;
+        let panY = 0;
+        let isPanning = false;
+        let panStartX = 0;
+        let panStartY = 0;
+
+        function updateZoom() {
+            fsImgMain.style.transform = `translate(${panX}px, ${panY}px) scale(${zoomLevel})`;
+            document.getElementById('btnFsZoomReset').textContent = Math.round(zoomLevel * 100) + '%';
+            if (zoomLevel > 1.0) {
+                fsImgMain.style.cursor = 'grab';
+            } else {
+                fsImgMain.style.cursor = 'default';
+                panX = 0;
+                panY = 0;
+                fsImgMain.style.transform = `translate(0px, 0px) scale(${zoomLevel})`;
+            }
+        }
+
+        function updateFullscreenUI() {
+            fsImgMain.src = 'pages/page_' + currentPage + '.png';
+            fsImgMain.alt = 'Halaman ' + currentPage;
+            fsPageInd.textContent = 'Halaman ' + currentPage + ' dari ' + TOTAL_PAGES;
+            fsPageBad.textContent = 'HAL. ' + currentPage + ' / ' + TOTAL_PAGES;
+            
+            fsBtnPrev.disabled = currentPage === 1;
+            fsBtnNext.disabled = currentPage === TOTAL_PAGES;
+
+            // Reset zoom on page change
+            zoomLevel = 1.0;
+            panX = 0;
+            panY = 0;
+            updateZoom();
+
+            const content = getContent(currentPage);
+            fsTrans.style.opacity = '0';
+            fsTranslat.style.opacity = '0';
+            setTimeout(() => {
+                fsTrans.textContent = content.trans;
+                fsTranslat.textContent = content.translat;
+                fsTrans.style.opacity = '1';
+                fsTranslat.style.opacity = '1';
+            }, 150);
+        }
+
+        function openFullscreen() {
+            fsOverlay.classList.remove('hidden');
+            fsOverlay.classList.add('flex');
+            setTimeout(() => {
+                fsOverlay.style.opacity = '1';
+            }, 10);
+            updateFullscreenUI();
+        }
+
+        function closeFullscreen() {
+            stopSlideshow();
+            fsOverlay.style.opacity = '0';
+            setTimeout(() => {
+                fsOverlay.classList.remove('flex');
+                fsOverlay.classList.add('hidden');
+            }, 300);
+            
+            if (document.fullscreenElement) {
+                document.exitFullscreen().catch(err => console.log(err));
+            }
+        }
+
+        function toggleSlideshow() {
+            if (isSlideshowPlaying) {
+                stopSlideshow();
+            } else {
+                startSlideshow();
+            }
+        }
+
+        function startSlideshow() {
+            isSlideshowPlaying = true;
+            fsBtnPlay.innerHTML = '<span class="material-symbols-outlined text-sm">pause</span> HENTIKAN';
+            fsBtnPlay.classList.add('bg-primary/20', 'text-primary-container');
+            slideshowInterval = setInterval(() => {
+                if (currentPage < TOTAL_PAGES) {
+                    goToPage(currentPage + 1, 'next');
+                } else {
+                    stopSlideshow();
+                }
+            }, 4000);
+        }
+
+        function stopSlideshow() {
+            isSlideshowPlaying = false;
+            fsBtnPlay.innerHTML = '<span class="material-symbols-outlined text-sm">play_arrow</span> MULAI SLIDESHOW';
+            fsBtnPlay.classList.remove('bg-primary/20', 'text-primary-container');
+            if (slideshowInterval) {
+                clearInterval(slideshowInterval);
+                slideshowInterval = null;
+            }
+        }
+
+        function toggleNativeFullscreen() {
+            if (!document.fullscreenElement) {
+                fsOverlay.requestFullscreen().catch(err => {
+                    alert(`Gagal mengaktifkan fullscreen: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        fsBtnOpen.addEventListener('click', openFullscreen);
+        fsBtnClose.addEventListener('click', closeFullscreen);
+
+        fsBtnPrev.addEventListener('click', () => {
+            if (currentPage > 1) goToPage(currentPage - 1, 'prev');
+        });
+
+        fsBtnNext.addEventListener('click', () => {
+            if (currentPage < TOTAL_PAGES) goToPage(currentPage + 1, 'next');
+        });
+
+        fsBtnPlay.addEventListener('click', toggleSlideshow);
+        fsBtnNative.addEventListener('click', toggleNativeFullscreen);
+
+        // Zoom Click Listeners
+        document.getElementById('btnFsZoomIn').addEventListener('click', () => {
+            if (zoomLevel < 3.0) {
+                zoomLevel += 0.25;
+                updateZoom();
+            }
+        });
+
+        document.getElementById('btnFsZoomOut').addEventListener('click', () => {
+            if (zoomLevel > 0.5) {
+                zoomLevel -= 0.25;
+                updateZoom();
+            }
+        });
+
+        document.getElementById('btnFsZoomReset').addEventListener('click', () => {
+            zoomLevel = 1.0;
+            panX = 0;
+            panY = 0;
+            updateZoom();
+        });
+
+        // Drag to Pan listeners
+        fsImgMain.addEventListener('mousedown', (e) => {
+            if (zoomLevel <= 1.0) return;
+            isPanning = true;
+            fsImgMain.style.cursor = 'grabbing';
+            panStartX = e.clientX - panX;
+            panStartY = e.clientY - panY;
+            e.preventDefault();
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isPanning) return;
+            panX = e.clientX - panStartX;
+            panY = e.clientY - panStartY;
+            // Limit pan bounds roughly to keep image in view
+            const maxPan = zoomLevel * 400;
+            panX = Math.max(-maxPan, Math.min(maxPan, panX));
+            panY = Math.max(-maxPan, Math.min(maxPan, panY));
+            fsImgMain.style.transform = `translate(${panX}px, ${panY}px) scale(${zoomLevel})`;
+        });
+
+        window.addEventListener('mouseup', () => {
+            if (isPanning) {
+                isPanning = false;
+                fsImgMain.style.cursor = 'grab';
+            }
+        });
+
+        // ========================================
+        // REVEAL ANIMATIONS
+        // ========================================
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Trigger hero reveal immediately
+        window.addEventListener('load', () => {
+            document.querySelectorAll('section:first-of-type .reveal').forEach(el => el.classList.add('active'));
+        });
+    </script>
+</body>
+
+</html>
